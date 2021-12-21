@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.name}}编译监控</title>
+    <style>
+        .console {
+            width: 100%;
+            color: aquamarine;
+        }
+        .content {
+            padding: 10px;
+            background: black;
+            height: 600px;
+            word-break:break-all;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="console">
+        <div class="content" id="result">
+        </div>
+    </div>
+<div>
+    <button id="clearBtn">清空内容</button>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script>
+    $(function () {
+        var ws = new WebSocket("ws://localhost:10090/web/ws/{{.name}}");
+        try {
+            ws.onopen = function () {
+                $("#result").html(addDateTime("连接服务器成功"))
+            };
+            ws.onclose = function () {
+                $("#result").html(addDateTime("和服务器断开连接"))
+            };
+            ws.onerror = function (e) {
+                console.log(e)
+            };
+            ws.onmessage = function (message) {
+                var msg = JSON.parse(message.data);
+                let result = addDateTime("提交人:["+msg.commit_user+"]");
+                result +="构建执行结果:<br>" + replace(msg.result);
+                $("#result").html(function (_, oldHtml) {
+                    return oldHtml + result;
+                })
+            }
+        } catch (e) {
+            $("#result").text(e)
+        }
+        $("#clearBtn").click(() => {
+            $("#result").html(addDateTime("日志已清空"))
+        });
+    });
+    function replace(str) {
+        return str.replace(/[\n]/g,"<br>");
+    }
+    function addDateTime(msg) {
+        var myDate = new Date();
+        var year=myDate.getFullYear();
+        var month=myDate.getMonth()+1;
+        var date=myDate.getDate();
+        var h=myDate.getHours();
+        var m=myDate.getMinutes();
+        var s=myDate.getSeconds();
+
+        var now=year+'-'+getNow(month)+"-"+getNow(date)+" "+getNow(h)+':'+getNow(m)+":"+getNow(s);
+        return msg + "   ["+now+"]<br>"
+    }
+    function getNow(s) {
+        return s < 10 ? '0' + s: s;
+    }
+
+
+</script>
+</html>

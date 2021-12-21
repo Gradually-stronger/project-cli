@@ -1,0 +1,18 @@
+{
+  "server": {
+    "port": 10090,
+    "default_source_name": "source"
+  },
+  "projects": [
+    {
+      "name": "release",
+      "ref": "master",
+      "path": "/Users/zanghaibin/projects/project-release-api",
+      "repo": "https://127.0.0.1/project-release-api.git",
+      "before_shell": "",
+      "after_shell": "build.sh",
+      "notify": true,
+      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=004b37b8c50cc4b3c1c044f4e1e200a2ea4e1652ecb70ffc56922d9462caeeee"
+    }
+  ]
+}

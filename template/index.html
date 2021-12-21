@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目列表</title>
+</head>
+<body>
+    <h1>项目列表</h1>
+    <ul>
+    {{range $key, $value := .projects}}
+        <li>{{$key}} [<a href="projects/{{$key}}">监控</a>]</li>
+    {{end}}
+    </ul>
+</body>
+</html>
