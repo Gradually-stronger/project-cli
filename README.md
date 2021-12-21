@@ -7,7 +7,7 @@
 
 ## 使用说明
 
-[comment]: <> (首先安装[gxt-cli工具]&#40;http://127.0.0.1/project-cli.git&#41;)
+首先安装[project-cli工具](https://github.com/Gradually-stronger/project-cli.git)
 * 调试项目
 `gxt run main.go`
 * 编译项目

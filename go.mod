@@ -1,4 +1,4 @@
-module project-cli
+module project-ci
 
 go 1.15
 
