@@ -29,7 +29,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script>
     $(function () {
-        var ws = new WebSocket("ws://127.0.0.1:10090/web/ws/{{.name}}");
+        var ws = new WebSocket("ws://zanghaibin.press:10090/web/ws/{{.name}}");
         try {
             ws.onopen = function () {
                 $("#result").html(addDateTime("连接服务器成功"))

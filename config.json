@@ -8,9 +8,9 @@
       "name": "vuePlus",
       "ref": "main",
       "path": "/root/src/front-end/vue-elementPlus",
-      "repo": "git@github.com:Gradually-stronger/vue3-ElementPlus.git",
+      "repo": "http://gitlab.workai.com.cn/zanghb/uniapp-vue3-ts.git",
       "before_shell": "",
-      "after_shell": "build.sh",
+      "after_shell": "./build.sh",
       "notify": true,
       "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=65e2f1c316c8d8d25fe736730f470226bd156d7adb1d4f4e1ef1f61d9b0af1c8"
     }
