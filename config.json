@@ -5,14 +5,14 @@
   },
   "projects": [
     {
-      "name": "release",
-      "ref": "master",
-      "path": "/Users/zanghaibin/projects/project-release-api",
-      "repo": "https://127.0.0.1/project-release-api.git",
+      "name": "vue-elementPlus",
+      "ref": "main",
+      "path": "/root/src/front-end/vue-elementPlus",
+      "repo": "https://github.com/Gradually-stronger/vue3-ElementPlus.git",
       "before_shell": "",
       "after_shell": "build.sh",
       "notify": true,
-      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=004b37b8c50cc4b3c1c044f4e1e200a2ea4e1652ecb70ffc56922d9462caeeee"
+      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=65e2f1c316c8d8d25fe736730f470226bd156d7adb1d4f4e1ef1f61d9b0af1c8"
     }
   ]
 }
