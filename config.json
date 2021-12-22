@@ -5,10 +5,10 @@
   },
   "projects": [
     {
-      "name": "vue-elementPlus",
+      "name": "vuePlus",
       "ref": "main",
       "path": "/root/src/front-end/vue-elementPlus",
-      "repo": "https://github.com/Gradually-stronger/vue3-ElementPlus.git",
+      "repo": "git@github.com:Gradually-stronger/vue3-ElementPlus.git",
       "before_shell": "",
       "after_shell": "build.sh",
       "notify": true,
