@@ -7,12 +7,22 @@
     {
       "name": "vuePlus",
       "ref": "main",
-      "path": "/root/src/front-end/vue-elementPlus",
+      "path": "/root/src/front-end/uni-vue3-ts",
       "repo": "http://gitlab.workai.com.cn/zanghb/uniapp-vue3-ts.git",
       "before_shell": "",
       "after_shell": "./build.sh",
       "notify": true,
       "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=65e2f1c316c8d8d25fe736730f470226bd156d7adb1d4f4e1ef1f61d9b0af1c8"
+    },
+    {
+      "name": "hro-expert",
+      "ref": "hro-expert-platform-merge",
+      "path": "/root/src/front-end/hro-expert",
+      "repo": "http://gitlab.workai.com.cn/liwei/hro-expert-platform.git",
+      "before_shell": "",
+      "after_shell": "./build.sh",
+      "notify": true,
+      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=f174b9765659c637fcd4e587d6ba7a522cc964958aeb52c9b34a744b34d60992"
     }
   ]
 }

@@ -3,15 +3,15 @@
 
 ## 项目编译监控
 为方便查询CI工具的执行日志，保证项目正常运行，提供一个项目监控页面
-[点击监控](http://127.0.0.1:10090/web/projects)
+[点击监控](http://zanghaibin.press:10090/web/projects)
 
 ## 使用说明
 
 首先安装[project-cli工具](https://github.com/Gradually-stronger/project-cli.git)
 * 调试项目
-`gxt run main.go`
+`go run main.go`
 * 编译项目
-`gxt build` 编译后的文件在bin目录下
+`go build` 编译后的文件在bin目录下
 
 CI工具在运行时，监听到项目的hook消息后，工作流如下:
 * 有源码目录的情况: `切换工作目录-->拉取分支代码-->切换相应分支-->执行构建前脚本-->构建-->执行构建后脚本`

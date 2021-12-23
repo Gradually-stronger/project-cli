@@ -42,7 +42,7 @@ func (a *Hook) Hook(r *ghttp.Request) {
 	ref := body.GetString("ref")
 	ref = strings.TrimPrefix(ref, "refs/heads/")
 	glog.Info("当前分支:" + ref)
-	project.Pusher = body.GetString("pusher.full_name")
+	project.Pusher = body.GetString("user_name")
 	glog.Info("提交人:" + project.Pusher)
 	if ref == project.Ref {
 		a.taskQ.Insert(project)
