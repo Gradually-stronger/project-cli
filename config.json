@@ -18,7 +18,7 @@
       "name": "hro-expert",
       "ref": "hro-expert-platform-merge",
       "path": "/root/src/front-end/hro-expert",
-      "repo": "http://gitlab.workai.com.cn/liwei/hro-expert-platform.git",
+      "repo": "git@gitlab.workai.com.cn:liwei/hro-expert-platform.git",
       "before_shell": "",
       "after_shell": "./build.sh",
       "notify": true,
