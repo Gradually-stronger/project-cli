@@ -22,7 +22,7 @@
       "before_shell": "",
       "after_shell": "./after.sh",
       "notify": true,
-      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=f174b9765659c637fcd4e587d6ba7a522cc964958aeb52c9b34a744b34d60992"
+      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=fec8507b359b7f3687a23049a63d1886305aea30a5cafb7192ec53603444612d"
     }
   ]
 }
