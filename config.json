@@ -23,6 +23,16 @@
       "after_shell": "./after.sh",
       "notify": true,
       "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=fec8507b359b7f3687a23049a63d1886305aea30a5cafb7192ec53603444612d"
+    },
+    {
+      "name": "hro-school",
+      "ref": "hro-excellent-working-school-dev",
+      "path": "/root/src/front-end/hro-school",
+      "repo": "http://gitlab.workai.com.cn/guoms/hro-excellent-working-school.git",
+      "before_shell": "",
+      "after_shell": "./after.sh",
+      "notify": true,
+      "web_hook": "https://oapi.dingtalk.com/robot/send?access_token=fec8507b359b7f3687a23049a63d1886305aea30a5cafb7192ec53603444612d"
     }
   ]
 }
